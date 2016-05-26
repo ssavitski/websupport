@@ -1,0 +1,163 @@
+#section06 {
+  background: url(img/section06bg.jpg) right center no-repeat $color-white;
+
+  @include breakpoint($wrapper) {
+    background: $color-white;
+  }
+
+  h2 {
+    color: $color-black;
+    text-align: center;
+    margin: 0 0 60px 0;
+
+    @include breakpoint($tablet) {
+      margin: 0 0 40px 0;
+    }
+  }
+
+  .wrapper {
+    //max-width: 1920px;
+    margin: 0 auto;
+    @include breakpoint($wrapper) {
+      padding: 0;
+    }
+  }
+
+  .wrap06 {
+    width: 820px;
+    @include display-flex;
+    @include flexbox((
+            justify-content:space-between,
+            flex-wrap: wrap
+    ));
+
+    @include breakpoint($wrapper) {
+      background: none;
+      width: 100%;
+
+      @include flexbox((
+              justify-content:space-around,
+              flex-wrap: wrap
+      ));
+    }
+  }
+
+  article {
+    margin-bottom: 60px;
+    @include flexbox((
+      flex-basis: 360px
+    ));
+
+    @include breakpoint($wrapper) {
+      margin: 0 30px 30px 30px;
+    }
+
+    @include breakpoint($tablet) {
+      @include flexbox((
+              flex: 1 1 360px,
+              justify-content:space-around,
+      ));
+    }
+
+    &:last-child {
+      @include breakpoint($mobile) {
+        margin-bottom: 0;
+      }
+    }
+
+    h3 {
+      &:before {
+        content: '';
+        margin: 0 10px 0 0;
+        display: inline-block;
+        vertical-align: middle;
+        @include breakpoint($mobile) {
+          width: 24px;
+        }
+      }
+    }
+
+    &:first-child {
+      h3 {
+        &:before {
+          width: 31px;
+          height: 38px;
+          background: url(img/icon01-sec06.png) no-repeat;
+        }
+      }
+    }
+
+    &:nth-child(2) {
+      h3 {
+        &:before {
+          height:37px;
+          width:29px;
+          background: url(img/icon04-sec06.png) no-repeat;
+        }
+      }
+    }
+
+    &:nth-child(3) {
+      h3 {
+        &:before {
+          height:37px;
+          width:33px;
+          background: url(img/icon02-sec06.png) no-repeat;
+        }
+      }
+    }
+
+    &:nth-child(4) {
+      h3 {
+        &:before {
+          height:30px;
+          width:34px;
+          background: url(img/icon05-sec06.png) no-repeat;
+        }
+      }
+    }
+
+    &:nth-child(5) {
+      h3 {
+        &:before {
+          height:35px;
+          width:37px;
+          background: url(img/icon03-sec06.png) no-repeat;
+        }
+      }
+    }
+
+    &:nth-child(6) {
+      h3 {
+        &:before {
+          height:38px;
+          width:29px;
+          background: url(img/icon06-sec06.png) no-repeat;
+        }
+      }
+    }
+  }
+
+
+  h3 {
+    color: $color-black;
+    font-size: 24px;
+    font-weight: $font-regular;
+    margin: 0 0 10px 0;
+
+    @include breakpoint($wrapper) {
+      font-size: 22px;
+    }
+
+    @include breakpoint($mobile) {
+      font-size: $font-size-base;
+      font-weight: $font-bold;
+    }
+  }
+
+  p {
+    color: $color-black;
+    font-size: $font-size-base;
+    font-weight: $font-regular;
+  }
+}

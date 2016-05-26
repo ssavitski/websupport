@@ -1,0 +1,117 @@
+#section02 {
+  color: $color-black;
+  background: $color-white;
+
+  .section02wrap {
+    @include display-flex;
+    @include flex-flow(row wrap);
+    /*@include breakpoint($wrapper) {
+      padding: 0 10px;
+    }*/
+  }
+
+  h2 {
+    text-align: center;
+    flex: 1 1 100%;
+    margin: 0 0 67px;
+
+    @include breakpoint($mobile) {
+      margin-bottom: 15px;
+    }
+  }
+
+  article {
+    @include flexbox((
+            flex: 1 1 300px,
+            justify-content: space-between,
+    ));
+    position: relative;
+    text-align: center;
+    margin-bottom: 80px;
+    padding-bottom: 62px;
+
+    @include breakpoint($tablet-portrait) {
+      @include flexbox((
+              flex: 1 1 100%,
+      ));
+    }
+
+    @include breakpoint($tablet) {
+      margin-bottom: 30px;
+    }
+
+    &:first-child {
+      h3 {
+        &:before {
+          background: url(img/icon-repair.png) no-repeat;
+        }
+      }
+    }
+
+    &:nth-child(2) {
+      h3 {
+        &:before {
+          background: url(img/icon-cus.png) no-repeat;
+        }
+      }
+    }
+
+    &:last-child {
+      h3 {
+        &:before {
+          background: url(img/icon-set.png) no-repeat;
+        }
+      }
+
+      @include breakpoint($mobile) {
+        margin-bottom: 0;
+      }
+    }
+
+    h3 {
+      //margin-top: 35px;
+      margin-bottom: 0;
+
+      &:before {
+        content: '';
+        width: 53px;
+        height: 53px;
+        margin: 0 auto 30px auto;
+        display: block;
+        vertical-align: middle;
+      }
+    }
+
+    p {
+      padding: 25px 30px 30px 30px;
+
+      @include breakpoint($mobile) {
+        padding: 15px 10px;
+      }
+    }
+  }
+
+  .buy-now {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 100%;
+    max-width: 290px;
+    color: $color-white;
+    font-size: 24px;
+    text-align: center;
+    background: $color-black;
+    margin-left: -145px;
+    padding: 14px;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+
+    @include breakpoint($mobile) {
+      font-size: 20px;
+    }
+  }
+}

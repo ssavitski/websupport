@@ -1,0 +1,129 @@
+footer {
+  background: $color-black;
+
+  .wrapper {
+    @include display-flex;
+    @include flexbox((
+            justify-content:space-between,
+            flex-wrap: wrap,
+            align-items: center
+    ));
+    min-height: 80px;
+
+    @include breakpoint($tablet) {
+      padding: 30px 0;
+    }
+  }
+
+  .footer-logo {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $color-white;
+    padding-left: 46px;
+    display: block;
+    height: 41px;
+    background: url(img/logo-footer.png) center left no-repeat;
+    width: 170px;
+    @include flexbox((
+        flex-wrap: wrap,
+        align-items: center
+    ));
+
+    span {
+      line-height: 18px;
+      display: block;
+    }
+
+    @include breakpoint($tablet) {
+      margin: 0 auto;
+
+      @include breakpoint($tablet) {
+        margin-bottom: 26px;
+      }
+    }
+  }
+
+  .footer-contact {
+    @include breakpoint($tablet) {
+      width: 100%;
+    }
+
+    a {
+      display: block;
+      color: $color-white;
+      font-size: 20px;
+      margin-top: 10px;
+
+      i {
+        @include opacity(0.5);
+        @include transition(all 0.3s ease);
+        margin-right: 4px;
+      }
+
+      &:hover {
+        text-decoration: none;
+
+        i {
+          @include opacity(1);
+        }
+      }
+
+      @include breakpoint($tablet) {
+        text-align: center;
+        display: block;
+        margin-bottom: 10px;
+      }
+    }
+
+    p {
+      font-size: $font-size-base;
+      font-weight: $font-regular;
+      @include opacity(0.5);
+      @include breakpoint($tablet) {
+        font-size: 14px;
+        text-align: center;
+        margin-bottom: 20px;
+
+      }
+    }
+  }
+
+  .footer-lnk {
+    @include breakpoint($tablet) {
+      width: 100%;
+    }
+
+    a {
+      font-size: 20px;
+      color: $color-white;
+      text-align: right;
+      @include opacity(0.5);
+      @include transition(all 0.3s ease);
+      display: block;
+      float: right;
+
+      &:hover {
+        @include opacity(1);
+      }
+
+      @include breakpoint($tablet) {
+        text-align: center;
+        float: none;
+        margin-bottom: 10px;
+      }
+    }
+
+    p {
+      font-size: $font-size-base;
+      font-weight: $font-light;
+      clear: both;
+      @include opacity(0.5);
+
+      @include breakpoint($tablet) {
+        font-size: 14px;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

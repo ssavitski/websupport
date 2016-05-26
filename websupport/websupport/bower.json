@@ -1,0 +1,16 @@
+{
+  "name": "webcare",
+  "version": "0.0.1",
+  "description": "Professional webcare",
+  "dependencies": {
+    "bootstrap-sass": "~3.3.5",
+    "font-awesome": "fontawesome#~4.4.0",
+    "Swiper": "swiper#~3.1.5"
+  },
+  "devDependencies": {
+    "compass-breakpoint": "breakpoint-sass#~2.6.1",
+    "compass-sass-mixins": "latest",
+    "prefixes.scss": "~0.2.0",
+    "simple-text-rotator": "~1.0.0"
+  }
+}

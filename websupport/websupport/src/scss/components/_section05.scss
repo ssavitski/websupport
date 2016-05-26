@@ -1,0 +1,77 @@
+#section05 {
+  background-color: $color-cream;
+  padding: 68px 0;
+
+  @include breakpoint($wrapper) {
+    padding: 40px 0;
+  }
+
+  .wrapper {
+    @include display-flex;
+    @include justify-content(center);
+    @include breakpoint($tablet) {
+      @include flex-direction(column);
+      @include align-items(center);
+    }
+  }
+
+  .green-step {
+    background-color: $color-green-base;
+    height: 120px;
+    width: 120px;
+    @include border-radius(100%);
+    @include display-flex;
+    @include justify-content(center);
+    @include align-items(center);
+
+    @include breakpoint($wrapper) {
+      height: 100px;
+      width: 100px;
+    }
+
+    img {
+      display: block;
+    }
+  }
+
+  .about-step {
+    padding: 0 60px;
+
+    @include breakpoint($wrapper) {
+      padding: 0 30px;
+    }
+
+    @include breakpoint($tablet) {
+      padding: 30px 0;
+    }
+
+    h3 {
+      color: $color-black;
+      text-align: center;
+      margin: 0;
+
+      @include breakpoint($wrapper) {
+        font-size: 24px;
+      }
+    }
+
+    img {
+      text-align: center;
+      margin: 0 auto;
+      display: block;
+
+      @include breakpoint($wrapper) {
+        width: 80%;
+      }
+    }
+
+    p {
+      color: $color-black;
+      font-size: $font-size-base;
+      font-weight: $font-regular;
+      text-align: center;
+      margin: 0;
+      @include opacity(0.5);
+    }
+  }
+}

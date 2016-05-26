@@ -1,0 +1,124 @@
+::-moz-selection {
+  color: $color-white;
+  background: $color-green;
+}
+
+::selection {
+  color: $color-white;
+  background: $color-green;
+}
+
+/** {
+  -webkit-overflow-scrolling: touch;
+}*/
+
+body {
+  color: $color-white;
+  font-family: $font-family-base;
+  font-weight: $font-regular;
+  font-size: $font-size-base;
+  background: #1b201e;
+  overflow-x: hidden;
+}
+
+body > section {
+  @include clearfix();
+}
+
+a {
+  transition: all 0.3s ease;
+}
+
+p {
+  line-height: 25px;
+  letter-spacing: .03rem;
+}
+
+h2 {
+  font-size: 67px;
+  font-weight: $font-thin;
+  text-align: center;
+  margin: 0 0 50px;
+
+  @include breakpoint($tablet-portrait) {
+    font-size: 50px;
+  }
+
+  @include breakpoint($mobile) {
+    font-size: 46px;
+    margin-bottom: 30px;
+  }
+}
+
+h3 {
+  font-size: 36px;
+  font-weight: $font-light;
+
+  @include breakpoint($tablet-portrait) {
+    font-size: 28px;
+  }
+}
+
+input,textarea,
+&.form-control {
+  color: $color-white;
+  font-size: 36px;
+  font-weight: $font-extra-thin;
+  line-height: 47px;
+  height: auto;
+  padding-left: 0;
+  padding-right: 0;
+  background-color: transparent;
+  border-bottom: 1px solid $color-light-gray;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  @include border-radius(0);
+  @include box-shadow(0);
+
+  &:focus {
+    border-bottom: 1px solid $color-white;
+  }
+
+  @include breakpoint($mobile) {
+    font-size: 24px;
+    line-height: inherit;
+  }
+}
+
+input,
+textarea,
+button,
+&:focus {
+  outline: none!important;
+}
+
+input,
+textarea {
+  &:focus {
+	box-shadow: none!important;
+  }
+}
+
+textarea {
+  resize: none;
+}
+
+.wrapper {
+  max-width: 1460px;
+  margin: 0 auto;
+  padding: 0 40px;
+
+  @include breakpoint($tablet) {
+    padding: 0 20px;
+  }
+
+  @include breakpoint($mobile) {
+    padding: 0 15px;
+  }
+}
+
+/*.btn-green {
+  color: $color-white;
+  background-color: $color-green;
+}*/

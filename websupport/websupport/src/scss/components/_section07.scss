@@ -1,0 +1,249 @@
+#section07 {
+  padding: 0;
+}
+
+#customers {
+  padding: 90px 0 70px 0;
+  background-color: $color-white;
+
+  @include breakpoint($tablet) {
+    padding: 30px 0;
+  }
+
+  @include breakpoint($mobile) {
+    padding: 30px 0;
+  }
+
+  .wrapper {
+    @include display-flex;
+    @include flex-flow(row wrap);
+    @include justify-content(space-around);
+    @include align-items(center);
+
+    @include breakpoint($wrapper) {
+      padding: 0 10px;
+    }
+
+    div {
+      text-align: center;
+
+      @include breakpoint($wrapper) {
+        padding: 30px 0;
+
+        @include flexbox((
+                flex-basis: 30%
+        ));
+      }
+
+      @include breakpoint($tablet) {
+        @include flexbox((
+                flex-basis: 50%
+        ));
+      }
+
+      @include breakpoint($mobile) {
+        @include flexbox((
+                flex-basis: 100%
+        ));
+      }
+    }
+
+    img {
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+    }
+  }
+}
+
+#swiper-slider {
+  height: 556px;
+  background: url(img/section07bg.jpg) no-repeat;
+  background-size: cover;
+  padding-top: 80px;
+
+  @include breakpoint($wrapper) {
+    height: auto;
+    padding-bottom: 30px;
+  }
+  @include breakpoint($tablet) {
+    padding-top: 60px;
+  }
+  .wrapper{
+    position: relative;
+    @include breakpoint($mobile) {
+     padding: 0;
+    }
+  }
+
+  h2 {
+    color: $color-white;
+    text-align: center;
+    margin: 0 0 36px 0;
+  }
+
+  .swiper-container {
+    width: 100%;
+    max-width: 1056px;
+    height: 435px;
+    padding-top: 60px;
+
+    @include breakpoint($wrapper) {
+      max-width: 90%;
+    }
+  }
+
+  .slide-contayner {
+    background-color: $color-white;
+    padding: 70px 60px 60px 60px;
+
+    @include box-shadow(0 3px 15px -3px $color-gray);
+    height: 365px;
+
+    @include breakpoint($tablet) {
+      padding: 70px 30px 60px 30px;
+    }
+
+    &:after {
+      content: "\201C";
+      display: block;
+      font-size: 120px;
+      color: $color-green-base;
+      text-align: center;
+      line-height: 90px;
+      height: 30px;
+      width: 54px;
+      margin: 0 auto;
+
+      @include breakpoint($wrapper) {
+
+      }
+    }
+  }
+
+  .swiper-slide {
+    //padding:80px 0 0 0;
+    height: 100%;
+
+    h3 {
+      color: $color-black;
+      text-align: center;
+      font-size: 36px;
+      margin: 0 0 10px 0;
+
+      @include breakpoint($tablet) {
+        font-size: 30px;
+      }
+
+      @include breakpoint($mobile) {
+        font-size: 24px;
+      }
+    }
+
+    h4 {
+      color: $color-black;
+      text-align: center;
+      margin: 0 0 26px 0;
+      font-size: $font-size-base;
+      @include opacity(0.5);
+
+      @include breakpoint($wrapper) {
+        font-size: 14px;
+      }
+
+      @include breakpoint($mobile) {
+        font-size: 12px;
+      }
+    }
+
+    p {
+      color: $color-black;
+      text-align: center;
+      margin: 0 0 26px 0;
+      font-size: 24px;
+      display: block;
+      overflow: hidden;
+      height: 100px;
+
+      @include breakpoint($wrapper) {
+        height: 136px;
+      }
+
+      @include breakpoint($tablet) {
+       font-size: 18px;
+        height: 150px;
+        margin: 0 0 16px 0;
+      }
+
+      @include breakpoint($mobile) {
+        font-size: $font-size-base;
+        margin: 0 0 26px 0;
+      }
+    }
+
+    img {
+      display: block;
+      margin: 0 auto;
+      position: absolute;
+      top: -60px;
+      z-index: 10;
+      margin-left: -60px;
+      left: 50%;
+      @include border-radius(100%);
+    }
+  }
+
+  .swiper-pagination {
+    position: relative;
+    top: 120px;
+
+    @include breakpoint($wrapper) {
+      display: none;
+    }
+
+    span {
+      height: 9px;
+      width: 9px;
+      margin: 0 5px;
+      background-color: $color-white;
+      border: 1px solid $color-black;
+      @include opacity(1);
+
+      &.swiper-pagination-bullet-active {
+        background-color: $color-green-base;
+        border: 1px solid $color-green-base;
+      }
+    }
+  }
+
+  .swiper-button-next {
+    background: url(img/arroy-right.png) center  center no-repeat;
+    height: 40px;
+    width: 40px;
+    margin-top: -18px;
+    top: 60%;
+
+    @include breakpoint($mobile) {
+      margin-top: -20px;
+      top: 60%;
+      top: auto;
+      bottom: 20px;
+      right: 20px;
+    }
+  }
+
+  .swiper-button-prev {
+    background: url(img/arroy-left.png) center center no-repeat;
+    height: 40px;
+    width: 40px;
+    margin-top: -18px;
+    top: 60%;
+
+    @include breakpoint($mobile) {
+      margin-top: -20px;
+      top: auto;
+      bottom: 20px;
+      left: 20px;
+    }
+  }
+}

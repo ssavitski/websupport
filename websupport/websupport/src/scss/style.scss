@@ -1,0 +1,30 @@
+/*!
+	*Theme Name: Websupport
+	*Theme URI: http://html5blank.com
+	*Version: 1.0
+	*Author: Dmitry Santotsky (san_tik@mail.ru)
+
+	License: MIT
+	License URI: http://opensource.org/licenses/mit-license.php
+*/
+@import 'bower_components/compass-sass-mixins/lib/compass';
+@import 'mixins/clearfix';
+@import 'mixins/border-radius';
+@import 'mixins/opacity';
+@import 'mixins/box-shadow';
+@import 'framework/variables';
+@import 'framework/typography';
+@import 'framework/addon';
+@import 'framework/base';
+@import 'components/header';
+@import 'components/footer';
+@import 'components/common';
+@import 'components/section01';
+@import 'components/section02';
+@import 'components/section03';
+@import 'components/section04';
+@import 'components/section05';
+@import 'components/section06';
+@import 'components/section07';
+@import 'components/section08';
+
